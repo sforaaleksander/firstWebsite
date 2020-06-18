@@ -3,6 +3,14 @@
   width: 33.33%;
 }
 
+body { background-color: #c3bbe3; }
+
+h1 {background-color: #f67d97 } 
+
+footer { text-align: center }
+
 H2 { text-align: center }
 
 H1 { text-align: center }
+
+.backHome { text-align: center }
