@@ -51,8 +51,13 @@ font-family: Avantgarde, sans-serif;}
 .avalokitesvara {
 column-count:2;}
 
-.backHome { text-align: center }
+.backHome { text-align: center;
+margin: 15px; }
 
 #sutra_link {font-size: larger;
 font-weight: 900;}
+
+#contact_header { letter-spacing: 10px;
+font-style: italic;
+background-color: aliceblue; }
 
