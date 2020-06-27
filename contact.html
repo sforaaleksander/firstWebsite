@@ -8,28 +8,22 @@
     <title>CONTACT</title>
 </head>
 
-<body>
+<body onload="document.form.name.focus()">
     <header>
-        <h1>
-            <span id="contact_header">CONTACT ME</span></h1>
+        <h1 id="contact_header">
+            CONTACT ME</h1>
     </header>
-    <main>
-        <form class="contact_form">
-            <div class="form">
-                <input type="text" name="Name" placeholder="your name"/>
-            </div>
-            <div class="form">
-                <input type="text" name="email"
-                placeholder="your email"/>
-            </div>
-            <div class="form">
-                <textarea name="message" placeholder="What's on your mind?"></textarea>
-            </div>
-            <input class="button" type="submit" value="Submit" name="submit-form"/>
-
+    <main class="flex-center">
+        <form class="contact_form" name="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name" />
+            <label for="name">Email:</label>
+            <input type="text" id="email" placeholder="Your email" />
+            <label for="name">Message:</label>
+            <textarea id="message" placeholder="What's on your mind?"></textarea>
+            <input class="button" type="submit" value="Submit" name="submit-form" 
+            onclick="validateFormSubmission(document.getElementById('email').value, document.getElementById('name').value, document.getElementById('message').value)"/>
         </form>
-
-
         <div class="backHome">
             <a href="index.html"> BACK HOME </a>
         </div>
@@ -37,6 +31,7 @@
     <footer>
         This is a webpage made by me in 2020.
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
