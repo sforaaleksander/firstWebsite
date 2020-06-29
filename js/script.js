@@ -3,16 +3,15 @@ function validateEmail(InputText) {
     return emailFormat.test(InputText);
 } 
 
-function textNotNull(InputText) {
-    return "/s".test(InputText);
+function fieldsNotNullNorEmpty(InputText1, InputText2, InputText3) {
+    return !("/s".test(InputText1) || "/s".test(InputText2) || "/s".test(InputText3)
+            || InputText1==="" || InputText2==="" || InputText3==="");
 }
 
-function validateFormSubmission(Email, Name, Message) {
+function validateFormSubmission(Email, Name) {
     alert("Validating");
     if ((!validateEmail(Email))) {
-        alert("Invalid email adress format!");
-    } else if (!(textNotNull(Name) && textNotNull(Message))) {
-        alert("All fields must be filled in.");
+        alert("Invalid email address format!");
     } else {
         alert(`Message sent! We'll get in touch with you soon, ${Name}!`);
     }
@@ -23,14 +22,10 @@ function updateButtonStatus(){
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let message = document.getElementById('message').value;
-    if(!(name==="" || email==="" || message==="")) {
+    if(fieldsNotNullNorEmpty(name, email, message)) {
         enableButton()
-        console.log("enable");
-
     } else {
         disableButton()
-        console.log("disable");
-
     }
 }
 
