@@ -17,9 +17,9 @@
         <form class="contact_form" name="form" onkeyup="updateButtonStatus()">
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Your name" />
-            <label for="name">Email:</label>
+            <label for="email">Email:</label>
             <input type="text" id="email" placeholder="Your email" />
-            <label for="name">Message:</label>
+            <label for="message">Message:</label>
             <textarea id="message" placeholder="What's on your mind?"></textarea>
             <input class="button" id="submit-button" type="submit" value="Submit" name="submit-form" disabled="disabled"
             onclick="validateFormSubmission(document.getElementById('email').value, document.getElementById('name').value, document.getElementById('message').value)"/>

@@ -1,19 +1,10 @@
 function validateEmail(InputText) {
-    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (InputText.match(emailFormat)) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    const emailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    return emailFormat.test(InputText);
 } 
 
 function textNotNull(InputText) {
-    if (InputText==="") {
-        return false;
-    } else {
-        return true;
-    }
+    return "/s".test(InputText);
 }
 
 function validateFormSubmission(Email, Name, Message) {
@@ -32,7 +23,7 @@ function updateButtonStatus(){
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let message = document.getElementById('message').value;
-    if(!(name=="" || email=="" || message=="")) {
+    if(!(name==="" || email==="" || message==="")) {
         enableButton()
         console.log("enable");
 
